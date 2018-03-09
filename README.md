@@ -21,29 +21,28 @@ Configuration
 
 in the .clientprofile
 
-1. key.id=<your account key>
-2. key.secret=<your account key secret>
-3. endpoint=<API endpoint, ex) cn-shanghai>
+1. key.id = your account key
+2. key.secret = your account key secret
+3. endpoint = API endpoint, ex) cn-shanghai
 
-4. stop-on-failure=<stops the instance when SLB status is 'abnormal', true | false>
+4. stop-on-failure = stops the instance when SLB status is 'abnormal', true | false
 
-5. region-id=<region where your SLB's running, ex) cn-shanghai>
-6. slb-id=<the SLB's id>
-7. acrion-ari=<the action ARI to run when the failure's found from SLB. it has to be defined in your the autoscaling configuration>
+5. region-id = region where your SLB's running, ex) cn-shanghai
+6. slb-id = the SLB's id
+7. acrion-ari = the action ARI to run when the failure's found from SLB. it has to be defined in your the autoscaling configuration
 
-8. webhook-url=<the webhook URL for subscription mode. remark this when it's run by polling, ex) tcp://localhost:61616>
+8. webhook-url = the webhook URL for subscription mode. remark or leave blank this when it's run by polling mode, ex) tcp://localhost:61616
 
 5-6-7 are optional when stop-on-failure is true
 
 Notes
 
 1 Polling mode
-Simply run this script from commandline or from cron. There's no need to change the code. Be careful with number of intervals, intervals by SLB's healthchecks, mutes from Cloud Monitoring Service (CMS) Alert, CMS's own delays and as well as the intervals defiend from your crntab
+Simply run this script from commandline or from cron. There's no need to change the code. Be careful with the intervals, intervals by SLB's healthchecks, mutes from Cloud Monitoring Service (CMS) Alert, CMS's own delays and as well as the intervals defiend from your crntab
 
 2 Subscription mode
 The CMS offers webhook integrations to send its alerts. It sends the alerts to somewhere else which gets POSTs in JSON format.
-See https://github.com/nudbeach/baba-cms-webhook for further details. 
-
-Try to add your codes under "//	do something" on Main.java. This example does not contain when the messages comes from webhook
+See https://github.com/nudbeach/baba-cms-webhook for further details. It gets the alerts from CMS and relays
+Try to add your codes under "//	do something" on Main.java
 
 
