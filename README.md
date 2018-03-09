@@ -1,7 +1,7 @@
 # baba-ess-x-slb
 CMS API example which implements trigger firing Autoscaling Event by failures from SLB
 
-Alibaba Autoscaling (ESS) currently supports number of indicators which incurs autoscaling events such as availability of instance, CPU utilization, bandwidth and so on. But sometimes, for example, in case the application does not perfectly handle the peak loads, traffics, adding a brand new instance could be helpful instead of time-taking troubleshooting and problem solving at the issues. Because of this, some of our competitors offers SLB status as one of the autoscaling indicator. This example implements this by using Alibaba API
+Alibaba Autoscaling (ESS) currently supports number of indicators which incurs autoscaling events such as availability of instance, CPU utilization, bandwidth and so on. But sometimes, for example, in case the application does not perfectly handle the peak loads, traffics and hang, adding a brand new instance could be helpful instead of time-taking troubleshooting and problem solving at the issues. Because of this, some of our competitors offers SLB status as one of the autoscaling indicator. This example implements this by using Alibaba API
 
 Requirement 
 
