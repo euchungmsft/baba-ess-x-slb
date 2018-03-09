@@ -1,0 +1,11 @@
+# Uploading to OSS over CDN
+
+key.id=[your key id here]
+key.secret=[your key secret here]
+
+endpoint=[endpoint of where your bucket's on or your CDN domain]
+bucket=[your bucket name here]
+
+prefix=[prefix]
+
+upload.file=[file of directory]

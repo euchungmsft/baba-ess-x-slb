@@ -1,0 +1,1 @@
+gradlew build && java -jar build/libs/baba-ess-x-slb.jar
